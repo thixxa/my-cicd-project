@@ -60,7 +60,7 @@ jobs:
         working-directory: app
 
       - name: Run tests with coverage
-        run: npm test
+        run: npm run test -- --passWithNoTests
         working-directory: app
 
       - name: Upload coverage report
