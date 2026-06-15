@@ -4,7 +4,6 @@
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
 ![AWS](https://img.shields.io/badge/AWS-ECR%20%2B%20EC2-FF9900?logo=amazonaws)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=nodedotjs)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 A production-style, end-to-end CI/CD pipeline for a Node.js Express app 
 
