@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1780644539037" clover="3.2.0">
-  <project timestamp="1780644539038" name="All files">
+<coverage generated="1781501629724" clover="3.2.0">
+  <project timestamp="1781501629725" name="All files">
     <metrics statements="12" coveredstatements="10" conditionals="8" coveredconditionals="6" methods="3" coveredmethods="2" elements="23" coveredelements="18" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
     <file name="index.js" path="F:\DevOps\Projects\my-cicd-project\app\index.js">
       <metrics statements="12" coveredstatements="10" conditionals="8" coveredconditionals="6" methods="3" coveredmethods="2"/>

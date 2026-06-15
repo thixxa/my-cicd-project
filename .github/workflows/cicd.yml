@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  AWS_REGION: us-east-1                         # Change to your region
+  AWS_REGION: eu-north-1                        # Change to your region
   ECR_REPOSITORY: my-cicd-app                   # Must match your ECR repo name
   IMAGE_TAG: ${{ github.sha }}
 
