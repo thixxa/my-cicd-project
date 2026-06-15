@@ -2,17 +2,10 @@ const request = require('supertest');
 const app = require('../index');
 
 describe('GET /', () => {
-  it('should return 200 with a message', async () => {
+  it('should return 200 with HTML content', async () => {
     const res = await request(app).get('/');
     expect(res.statusCode).toBe(200);
-    expect(res.body).toHaveProperty('message');
-    expect(res.body.message).toBe('Hello, I am Thisanda Prasanjana!. I am a aspiring DevOps & Cloud engineer. I am passionate about building scalable and efficient cloud infrastructure, and I enjoy working with technologies like AWS, Docker, Kubernetes, Ansible, Terraform and CI/CD.');
-  });
-
-  it('should return version and environment fields', async () => {
-    const res = await request(app).get('/');
-    expect(res.body).toHaveProperty('version');
-    expect(res.body).toHaveProperty('environment');
+    expect(res.headers['content-type']).toMatch(/html/);
   });
 });
 
@@ -21,5 +14,17 @@ describe('GET /health', () => {
     const res = await request(app).get('/health');
     expect(res.statusCode).toBe(200);
     expect(res.body).toEqual({ status: 'ok' });
+  });
+
+  it('should return json content type', async () => {
+    const res = await request(app).get('/health');
+    expect(res.headers['content-type']).toMatch(/json/);
+  });
+});
+
+describe('GET /nonexistent', () => {
+  it('should return 404 for unknown routes', async () => {
+    const res = await request(app).get('/nonexistent');
+    expect(res.statusCode).toBe(404);
   });
 });
